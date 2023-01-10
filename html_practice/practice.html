@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .activate-button {
+                background-color: rgb(53, 77, 164);
+                color: white;
+                padding-left: 10px;
+                padding-right: 10px;
+                padding-bottom: 10px;
+                padding-top: 10px;
+                border-radius: 3px;
+                cursor: pointer;
+            }
+        
+            .activate-button:hover {
+                opacity: 0.5;
+            }
+        
+            .activate-button:active {
+                opacity: 0.2;
+            }
+        
+            .Test-button:hover {
+                background-color: white;
+                color: rgb(53, 77, 164);
+            }
+        
+            .Test-button:active {
+                background-color: white;
+                color: rgb(53, 77, 164);
+            }
+        
+            .Test-button {
+                background-color: rgb(9, 32, 81);
+                color: white;
+                padding-left: 10px;
+                padding-right: 10px;
+                padding-bottom: 10px;
+                padding-top: 10px;
+                border-radius: 10px;
+                cursor: pointer;
+                transition: background-color 1.5s, 
+                    color 0.5s;
+            }
+        </style>        
+    </head>
+
+    <body>
+
+        <p>Housing Affordability<p>
+            <button class="activate-button">Activate</button>
+            <button class="Test-button">Test</button>
+            <a href="https://github.com/nikhilchandra-stats?tab=repositories" target="_blank">Test Link</a>
+      
+    <div id="tester" style="width:600px;height:250px;"></div> 
+    
+    <script>
+        TESTER = document.getElementById('tester');
+        Plotly.newPlot( TESTER, [{
+        x: [1, 2, 3, 4, 5],
+        y: [1, 2, 4, 8, 16] }], {
+        margin: { t: 0 } } );
+    </script>
+            
+    </body>
+    
+</html>
