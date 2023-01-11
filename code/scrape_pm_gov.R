@@ -5,10 +5,6 @@ library(rvest)
 library(RSelenium)
 
 scrape_dt <- lubridate::now(tzone = "Australia/Sydney")
-board <- cah::pin_azbo()
-
-## Setup the driver and connection ----
-os <- cah::get_cah_env()
 
 #----------------------Detects if you are on pipeline or VM
 local_testing <- ifelse(os == "vm", TRUE, FALSE)
@@ -24,20 +20,6 @@ if(local_testing){
 
   remote_driver$open()
 
-
-}
-
-# If on Pipeline run run the following to engage selenium
-if(local_testing == FALSE){
-
-  server_address = "selenium"
-
-  server_port = 4444L
-
-  remote_driver <- RSelenium::remoteDriver(remoteServerAddr = server_address,
-                                           port = server_port,
-                                           browserName = "chrome")
-  remote_driver$open()
 
 }
 
